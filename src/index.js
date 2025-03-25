@@ -1,5 +1,5 @@
 ocument.addEventListener("DOMContentLoaded", function () {
-  fetch("http://localhost:3000/mbwa") // Fetch data from the JSON file
+  fetch("http://localhost:4000/mbwa") // Fetch data from the JSON file
     .then((response) => response.json())
     .then((res) => displayPets(res))
     .catch((error) => console.error("Error loading dog data:", error));
