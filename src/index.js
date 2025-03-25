@@ -1,4 +1,4 @@
-ocument.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
   fetch("http://localhost:4000/mbwa") // Fetch data from the JSON file
     .then((response) => response.json())
     .then((res) => displayPets(res))
@@ -23,12 +23,41 @@ ocument.addEventListener("DOMContentLoaded", function () {
                   `;
       dogGallery.innerHTML += dogCard; // Append dog card
 
-      // Smooth Scroll Function
-      function scrollToSection(sectionId) {
-        document
-          .getElementById(sectionId)
-          .scrollIntoView({ behavior: "smooth" });
-      }
+      // Get form values
+      const dogImage = document.getElementById("dogImage").value;
+      const dogName = document.getElementById("dogName").value;
+      const dogBreed = document.getElementById("dogBreed").value;
+      const dogAge = document.getElementById("dogAge").value;
+      const dogLocation = document.getElementById("dogLocation").value;
+
+      // Create dog object
+      const dogData = {
+        image: dogImage,
+        name: dogName,
+        breed: dogBreed,
+        age: dogAge,
+        location: dogLocation,
+      };
+
+      // Send data to db.json using fetch
+      fetch("http://localhost:4000/mbwa", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(dogData),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          alert("Dog details submitted successfully!");
+          document.getElementById("dogForm").reset(); // Reset form after submission
+        })
+        .catch((error) => console.error("Error:", error));
     });
+
+    // Smooth Scroll Function
+    function scrollToSection(sectionId) {
+      document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+    }
   }
 });

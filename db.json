@@ -5,28 +5,32 @@
       "name": "Buddy",
       "url": "https://kindredpup.com/wp-content/uploads/2020/12/120161984_2674750696119514_875923304621930075_o-1024x1024.jpg",
       "breed": "Labrador",
-      "age": "1 month old"
+      "age": "1 month old",
+      "location": "Eldoret"
     },
     {
       "id": 2,
       "name": "Max",
       "url": "https://images.pexels.com/photos/7643259/pexels-photo-7643259.jpeg?auto=compress&cs=tinysrgb&w=600",
       "breed": "Golden Retriever",
-      "age": "3 month old"
+      "age": "3 month old",
+      "location": "Machakos"
     },
     {
       "id": 1,
       "name": "Luna",
       "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAZTPVZlsI--xH0Nq6NMYUkKGhfDyu-KgDlg&s",
       "breed": "Husky",
-      "age": "2 month old"
+      "age": "2 month old",
+      "location": "Nairobi"
     },
     {
       "id": 1,
       "name": "Buddy",
       "url": "https://images.pexels.com/photos/12646549/pexels-photo-12646549.jpeg?auto=compress&cs=tinysrgb&w=600",
       "breed": "Bulldog",
-      "age": "4 month old"
+      "age": "4 month old",
+      "location": "Kitengela"
     }
   ]
 }
