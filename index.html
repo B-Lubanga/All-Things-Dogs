@@ -19,7 +19,7 @@
     <!-- Navbar -->
     <nav class="bg-blue-600 text-white p-4 shadow-md fixed top-0 w-full z-50">
       <div class="container mx-auto flex justify-between items-center">
-        <a href="#" class="text-2xl font-bold">🐶 Dog Adoption</a>
+        <a href="#home" class="text-2xl font-bold">🐶 Dog Adoption</a>
         <ul class="flex space-x-6">
           <li><a href="#home" class="hover:underline">Home</a></li>
           <li><a href="#adopt" class="hover:underline">Adopt</a></li>
@@ -36,14 +36,6 @@
       <p class="text-center mt-4">
         Find your perfect furry friend and give them a loving home.
       </p>
-    </section>
-
-    <!-- Adopt Section -->
-    <section
-      id="adopt"
-      class="pt-20 container mx-auto mt-8 p-6 bg-white rounded-lg shadow-lg"
-    >
-      <h2 class="text-3xl font-bold text-center">Find Your Perfect Dog 🐕</h2>
       <p class="text-center mt-2">
         Give a Dog a Loving Home! 🐾🏡 Looking for a furry friend to join your
         family? Our Adopt section connects you with dogs in need of a home.
@@ -53,14 +45,14 @@
         adding another companion, start your journey today and give a dog the
         love and care they deserve! 🐶💕
       </p>
-      <!-- Dog Gallery Container -->
-      <div
-        id="dogGallery"
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
-      >
-        <!-- Dog cards will be put here dynamically -->
-      </div>
+    </section>
 
+    <!-- Adopt Section -->
+    <section
+      id="adopt"
+      class="pt-20 container mx-auto mt-8 p-6 bg-white rounded-lg shadow-lg"
+    >
+      <h2 class="text-3xl font-bold text-center">Find Your Perfect Dog 🐕</h2>
       <div class="flex flex-col md:flex-row justify-center gap-4 mt-6">
         <input
           class="w-full md:w-1/3 p-3 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
@@ -70,7 +62,7 @@
           name="myBrowser"
         />
         <datalist id="breedName">
-          <option value="Labrador Retriever"></option>
+          <!-- <option value="Labrador Retriever"></option>
           <option value="German Shepherd"></option>
           <option value="Golden Retriever"></option>
           <option value="Bulldog"></option>
@@ -83,7 +75,7 @@
           <option value="Chihuahua"></option>
           <option value="Boxer"></option>
           <option value="Boerboel"></option>
-          <option value="Beagle"></option>
+          <option value="Beagle"></option> -->
         </datalist>
 
         <input
@@ -94,7 +86,7 @@
           list="locationList"
         />
         <datalist id="locationList">
-          <option value="Nairobi"></option>
+          <!-- <option value="Nairobi"></option>
           <option value="Kitengela"></option>
           <option value="Ngong'"></option>
           <option value="Mombasa"></option>
@@ -105,7 +97,7 @@
           <option value="Thika"></option>
           <option value="Nyeri"></option>
           <option value="Meru"></option>
-          <option value="Kisii"></option>
+          <option value="Kisii"></option> -->
         </datalist>
 
         <!-- Add ID to search button -->
@@ -115,6 +107,13 @@
         >
           Search
         </button>
+      </div>
+      <!-- Dog Gallery Container -->
+      <div
+        id="dogGallery"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+      >
+        <!-- Dog cards will be put here dynamically -->
       </div>
     </section>
 
