@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Smooth Scroll Function
 
-  function scrollToSection(sectionId) {
-    document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
-  }
+  // function scrollToSection(sectionId) {
+  //   document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+  // }
 });
