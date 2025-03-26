@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .catch((error) => console.error("Error loading dog data:", error));
   }
 
-  // Function to display dogs in the UI
+  // Function to display dogs in the UI section
   function displayPets(data) {
     const dogGallery = document.getElementById("dogGallery");
     dogGallery.innerHTML = ""; // Clear existing content
