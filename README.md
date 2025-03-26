@@ -46,14 +46,16 @@ The **Dog Rescue, eCommerce & Veterinary Platform** is a web-based platform desi
 
 ### APIs Used
 
-- **Google Maps API** – Location-based search for rescue centers, sellers, and vets.
+- **db.json**
 
 ## Future Enhancements
 
-- Secure payment integration u
+- Secure payment integration
 - Reviews & ratings for sellers, adopters, and vets.
 - AI-based dog breed matching for better recommendations.
 - Advanced vet appointment booking system.
+- Vetenary Services.
+- Dog food store.
 
 ## Contributing
 
