@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function displayPets(data) {
     const dogGallery = document.getElementById("dogGallery");
     const dogList = document.querySelector("#breedName");
+    const dogLocation = document.querySelector("#locationList");
 
     dogGallery.innerHTML = ""; // Clear existing content
     data.forEach((dog) => {
