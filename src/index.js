@@ -1,7 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("http://localhost:4000/mbwa") // Fetch data from the JSON file
+  
+    const breed = breedInput.value.toLowerCase();
+    const location = locationInput.value.toLowerCase();
+   
+    fetch("http://localhost:4000/mbwa") // Fetch data from the JSON file
     .then((response) => response.json())
-    .then((res) => displayPets(res))
+    const filteredDogs = data.filter((dog) => 
+        dog.breed.toLowerCase().includes(breed) && 
+        dog.location.toLowerCase().includes(location)
+      );
+
+      displayPets(filteredDogs); // Display only matching dogs
+    })
     .catch((error) => console.error("Error loading dog data:", error));
 
   function displayPets(data) {
@@ -9,7 +19,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const dogList = document.querySelector("#breedName");
     const dogLocation = document.querySelector("#locationList");
 
+    
     dogGallery.innerHTML = ""; // Clear existing content
+    
     data.forEach((dog) => {
       let searchOption = document.createElement("option");
       searchOption.value = dog.breed;
