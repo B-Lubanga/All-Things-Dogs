@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((response) => response.json()) // Convert response to JSON
       .then((data) => {
         displayPets(data); // Display all dogs on load
-        populateDropdowns(data); // Populate breed and location dropdowns dynamically
       })
       .catch((error) => console.error("Error loading dog data:", error));
   }
@@ -44,7 +43,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const dogGallery = document.getElementById("dogGallery");
     dogGallery.innerHTML = ""; // Clear existing content
 
+    const dataList = document.querySelector("#breedName");
+    const locationList = document.querySelector("#locationList");
+
     data.forEach((dog) => {
+      const option1 = document.createElement("option");
+      option1.innerHTML = ` <option value= ${dog.breed}></option>`;
+      dataList.appendChild(option1); //dog breed dropdown
+
+      const option2 = document.createElement("option");
+      option2.innerHTML = ` <option value=${dog.location}></option>`;
+      locationList.appendChild(option2); //dog location drop-down
+
       const dogCard = `
           <div id='card' class="bg-white p-4 rounded-lg shadow-lg">
             <img src="${dog.url}" alt="${dog.name}" class="w-full h-48 object-cover rounded-lg">
@@ -57,37 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Function to populate breed and location dropdowns dynamically
-  function populateDropdowns(data) {
-    const breedList = document.getElementById("breedName");
-    const locationList = document.getElementById("locationList");
-
-    // Extract unique breeds and locations from the data
-    const uniqueBreeds = [...new Set(data.map((dog) => dog.breed))]; // Get unique breeds
-    const uniqueLocations = [...new Set(data.map((dog) => dog.location))]; // Get unique locations
-
-    // Clear existing dropdown options
-    breedList.innerHTML = `<option value="">Select Breed</option>`;
-    locationList.innerHTML = `<option value="">Select Location</option>`;
-
-    // Populate breed dropdown
-    uniqueBreeds.forEach((breed) => {
-      let option = document.createElement("option");
-      option.value = breed;
-      option.textContent = breed;
-      breedList.appendChild(option);
-    });
-
-    // Populate location dropdown
-    uniqueLocations.forEach((location) => {
-      let option = document.createElement("option");
-      option.value = location;
-      option.textContent = location;
-      locationList.appendChild(option);
-    });
-  }
-
-  // Function to handle form submission
   document
     .getElementById("dogForm")
     .addEventListener("submit", function (event) {
@@ -127,6 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   // Smooth Scroll Function
+
   function scrollToSection(sectionId) {
     document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
   }

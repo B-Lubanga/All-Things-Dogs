@@ -46,11 +46,7 @@ The **Dog Rescue, eCommerce & Veterinary Platform** is a web-based platform desi
 
 ### APIs Used
 
-- **Petfinder API** – Fetch adoptable dogs and rescue center data.
-- **Firebase Authentication** – User login and authentication.
-- **Twilio API** – SMS and chat communication (optional for MVP).
 - **Google Maps API** – Location-based search for rescue centers, sellers, and vets.
-- **VetFinder API (if available)** – Fetch veterinarians and clinics.
 
 ## Future Enhancements
 

@@ -47,6 +47,14 @@
       "breed": "Japanese Spitz",
       "age": "3 months",
       "location": "Naivasha"
+    },
+    {
+      "id": "5589",
+      "url": "https://images.pexels.com/photos/10122494/pexels-photo-10122494.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "name": "Tigre",
+      "breed": "Corgi",
+      "age": "1 year",
+      "location": "Karen"
     }
   ]
 }
