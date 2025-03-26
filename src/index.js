@@ -11,7 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
     dogGallery.innerHTML = ""; // Clear existing content
     data.forEach((dog) => {
       let searchOption = document.createElement("option");
-      searchOption.innerHTML = `<option value="${dog.breed}"> `;
+      searchOption.value = dog.breed;
+      searchOption.textContent = dog.breed;
       dogList.appendChild(searchOption); //display search options
 
       const dogCard = `
