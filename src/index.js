@@ -67,6 +67,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // modal
+
+  // Form
   document
     .getElementById("dogForm")
     .addEventListener("submit", function (event) {
