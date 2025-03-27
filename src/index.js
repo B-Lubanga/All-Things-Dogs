@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to fetch all dogs from the server
   function fetchDogs() {
-    fetch("http://localhost:4000/mbwa") // Fetch data from the JSON server
+    fetch("https://all-things-dog-be.onrender.com/mbwa") // Fetch data from the JSON server
       .then((response) => response.json()) // Convert response to JSON
       .then((data) => {
         displayPets(data); // Display all dogs on load
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .getElementById("searchLocation")
       .value.toLowerCase();
 
-    fetch("http://localhost:4000/mbwa") // Fetch the data again
+    fetch("https://all-things-dog-be.onrender.com/mbwa") // Fetch the data again
       .then((response) => response.json()) // Convert response to JSON
       .then((data) => {
         // Filter the dogs based on user input
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
       };
 
       // Send data to db.json using fetch
-      fetch("http://localhost:4000/mbwa", {
+      fetch("https://all-things-dog-be.onrender.com/mbwa", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
