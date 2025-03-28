@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("searchButton").addEventListener("click", filterDogs);
 
   // Function to fetch all dogs from the server
+   // Function to fetch all dogs from the server
   function fetchDogs() {
     fetch("https://all-things-dog-be.onrender.com/mbwa") // Fetch data from the JSON server
       .then((response) => response.json()) // Convert response to JSON
